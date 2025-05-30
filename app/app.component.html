@@ -1,2 +1,5 @@
 <app-navigation></app-navigation>
+
+<div [ngClass]="weatherSVC.getWeatherClass('fog')">
 <router-outlet />
+</div>
