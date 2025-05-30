@@ -1,1 +1,4 @@
 <p>landing works!</p>
+
+
+<button *ngIf="!(auth.isAuthenticated$ | async)" (click)="auth.loginWithRedirect()">Log in</button>

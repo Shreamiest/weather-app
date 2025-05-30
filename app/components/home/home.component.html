@@ -1,1 +1,10 @@
 <p>home works!</p>
+
+<ng-container *ngIf="userProfile">
+    <p>{{userProfile.name || userProfile.nickname}}</p>
+    <p>{{userProfile.profileUrl}}</p>
+</ng-container>
+
+<input placeholder="City"/>
+<button>Display Weather</button>
+
