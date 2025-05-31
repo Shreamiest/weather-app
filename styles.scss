@@ -5,60 +5,6 @@
 $font-primary-color: #e6e6e6;
 $font-danger-color: rgba(250, 67, 67, 0.8);
 
-$weather-clear: linear-gradient(0deg, #fceabb 0%, #f8b500 100%);
-$weather-partly-cloudy: linear-gradient(0deg, #d7d2cc 0%, #304352 100%);
-$weather-cloudy: linear-gradient(0deg, #bdc3c7 0%, #2c3e50 100%);
-$weather-rain: linear-gradient(0deg, #4e54c8 0%, #8f94fb 100%);
-$weather-light-rain: linear-gradient(0deg, #667db6 0%, #0082c8 100%);
-$weather-thunderstorm: linear-gradient(0deg, #373B44 0%, #4286f4 100%);
-$weather-snow: linear-gradient(0deg, #e6dada 0%, #274046 100%);
-$weather-fog: linear-gradient(0deg, #3e5151 0%, #decba4 100%);
-$weather-hot: linear-gradient(0deg, #ff512f 0%, #dd2476 100%);
-$weather-cold: linear-gradient(0deg, #83a4d4 0%, #b6fbff 100%);
-
-
-.weather-clear {
-  background: $weather-clear;
-}
-
-.weather-partly-cloudy {
-  background: $weather-partly-cloudy;
-}
-
-.weather-cloudy {
-  background: $weather-cloudy;
-}
-
-.weather-rain {
-  background: $weather-rain;
-}
-
-.weather-light-rain {
-  background: $weather-light-rain;
-}
-
-.weather-thunderstorm {
-  background: $weather-thunderstorm;
-}
-
-.weather-snow {
-  background: $weather-snow;
-}
-
-.weather-fog {
-  background: $weather-fog;
-}
-
-.weather-hot {
-  background: $weather-hot;
-}
-
-.weather-cold {
-  background: $weather-cold;
-}
-
-
-
 * {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;

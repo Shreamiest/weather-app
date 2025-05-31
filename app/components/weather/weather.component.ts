@@ -18,8 +18,7 @@ export class WeatherComponent {
   @Output() out: EventEmitter<number> = new EventEmitter();
 
   constructor(
-    public auth: AuthService,
-    private router: Router,
+    public auth: AuthService
   ) { }
 
 

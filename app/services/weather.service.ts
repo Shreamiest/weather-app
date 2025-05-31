@@ -18,25 +18,4 @@ export class WeatherService {
         const url = `${this.apiUrl}?q=${encodeURIComponent(city)}&appid=${this.apiKey}&units=imperial`;
         return this.http.get<WeatherResponse>(url);
     }
-
-    getWeatherClass(condition: string): string {
-        switch (condition.toLowerCase()) {
-            case 'clear':
-                return 'weather-clear';
-            case 'clouds':
-                return 'weather-cloudy';
-            case 'rain':
-                return 'weather-rain';
-            case 'thunderstorm':
-                return 'weather-thunderstorm';
-            case 'snow':
-                return 'weather-snow';
-            case 'mist':
-            case 'fog':
-            case 'haze':
-                return 'weather-fog';
-            default:
-                return 'weather-partly-cloudy';
-        }
-    }
 }
