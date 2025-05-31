@@ -1,1 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+$font-primary-color: #e6e6e6;
+$font-danger-color: rgba(250, 67, 67, 0.8);
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.glassMorph {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  &.border {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  &.shadow {
+    box-shadow: 0 7px 10px 0px rgba(31, 38, 135, 0.25);
+  }
+}
+
+.wa-primary-btn {
+  padding: 8px 25px;
+  color: $font-primary-color;
+  border: 0;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 7px 10px 0px rgba(31, 38, 135, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 999px;
+  transition: 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(31, 38, 135, 0.4);
+    background: rgba(255, 255, 255, 0.35);
+  }
+
+  &.danger {
+    background: $font-danger-color;
+  }
+}
+
+section {
+  h1 {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: $font-primary-color;
+  }
+}

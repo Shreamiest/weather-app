@@ -1,0 +1,58 @@
+<section class="weather-section text-center mt-5">
+    <h1>You searched for: "{{cityWeather.name}}"</h1>
+
+    <div class="weather-table-wrapper mobile">
+        <table class="weather-table">
+            <thead>
+                <tr>
+                    <th>Date <small>(mm/dd/yyyy)</small></th>
+                    <th>Temperature (F)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{getDateNow() | date: 'MM/dd/yyyy'}}</td>
+                    <td>{{cityWeather.main.temp}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="weather-table-wrapper desktop">
+         <table class="weather-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <thead>
+                <tr>
+                    <th>(mm/dd/yyy)</th>
+                    <th>Temp (F)</th>
+                    <th>Description</th>
+                    <th>Main</th>
+                    <th>Pressure</th>
+                    <th>Humidity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{getDateNow() | date: 'MM/dd/yyyy'}}</td>
+                    <td>{{cityWeather.main.temp}}</td>
+                    <td>{{cityWeather.weather[0].description}}</td>
+                    <td>{{cityWeather.weather[0].main}}</td>
+                    <td>{{cityWeather.main.pressure}}</td>
+                    <td>{{cityWeather.main.humidity}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button class="wa-primary-btn mt-2 back-btn" (click)="home()">Back</button>
+</section>
