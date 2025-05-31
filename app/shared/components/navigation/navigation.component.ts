@@ -11,6 +11,13 @@ import { AuthService } from '@auth0/auth0-angular';
 })
 export class NavigationComponent {
 
-  constructor(public auth: AuthService) {}
-  
+  showLogoutDialog = false;
+
+  constructor(public auth: AuthService) { }
+
+  confirmLogout() {
+    this.showLogoutDialog = false;
+    this.auth.logout();
+  }
+
 }

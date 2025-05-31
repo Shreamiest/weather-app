@@ -6,11 +6,12 @@ import { WeatherService } from '../../services/weather.service';
 import { FormsModule } from '@angular/forms';
 import { WeatherComponent } from "../weather/weather.component";
 import { WeatherResponse } from '../../models/weather.model';
+import { SpinnerComponent } from "../../shared/components/spinner/spinner.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, AsyncPipe, FormsModule, WeatherComponent],
+  imports: [CommonModule, AsyncPipe, FormsModule, WeatherComponent, SpinnerComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -20,6 +21,7 @@ export class HomeComponent {
   public cityName: string = '';
   public errorMsg: string = '';
   public cityWeather: WeatherResponse | null = null;
+  public isLoading: boolean = false;
 
   constructor(
     public auth: AuthService,
@@ -37,15 +39,18 @@ export class HomeComponent {
   }
 
   getWeatherForecast() {
+    this.isLoading = true;
     this.weatherSVC.getWeatherByCity(this.cityName).subscribe({
       next: res => {
         this.errorMsg = '';
         this.cityWeather = res;
         console.log(res);
+        this.isLoading = false;
       },
       error: error => {
         console.error(error.error.message);
         this.errorMsg = error.error.message;
+        this.isLoading = false;
       }
     });
   }

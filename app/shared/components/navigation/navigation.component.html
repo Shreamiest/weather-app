@@ -3,7 +3,20 @@
     <img class="icon" src="assets/weather-icon.png">
     <p class="mx-3">Weather Forecast</p>
   </div>
-  <button *ngIf="auth.isAuthenticated$ | async" class="wa-primary-btn danger" (click)="auth.logout()">
+  <button *ngIf="auth.isAuthenticated$ | async" class="wa-primary-btn danger" data-bs-toggle="modal" data-bs-target="#logoutModal">
     Logout
   </button>
+</div>
+
+
+<div id="logoutModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-4 text-center">
+      <h5 class="mb-3">Are you sure you want to logout?</h5>
+      <div class="d-flex justify-content-center gap-3 mt-4">
+        <button class="wa-primary-btn danger" (click)="confirmLogout()">Logout</button>
+        <button class="wa-primary-btn" style="color: #333;" data-bs-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
 </div>
