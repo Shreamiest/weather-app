@@ -7,7 +7,7 @@ import { WeatherResponse } from '../models/weather.model';
     providedIn: 'root'
 })
 export class WeatherService {
-    private apiKey = '7bf02a80d36e24b45d8539d81018913a';
+    private apiKey = 'e3b55290a86d362a2a4fa99fd9cf48e1';
     private apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
     constructor(
@@ -15,7 +15,7 @@ export class WeatherService {
     ) { }
 
     getWeatherByCity(city: string): Observable<WeatherResponse> {
-        const url = `${this.apiUrl}?q=${encodeURIComponent(city)}&appid=${this.apiKey}`;
+        const url = `${this.apiUrl}?q=${encodeURIComponent(city)}&appid=${this.apiKey}&units=imperial`;
         return this.http.get<WeatherResponse>(url);
     }
 

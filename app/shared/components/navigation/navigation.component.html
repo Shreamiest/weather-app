@@ -1,6 +1,9 @@
-<div class="d-flex justify-content-between align-items-center">
-  <p class="mb-0">navigation works!</p>
-  <button *ngIf="auth.isAuthenticated$ | async" class="btn btn-outline-danger" (click)="auth.logout()">
-    Log out
+<div class="d-flex justify-content-between align-items-center glassMorph navbar p-3">
+  <div class="d-flex justify-content-center align-items-center">
+    <img class="icon" src="assets/weather-icon.png">
+    <p class="mx-3">Weather Forecast</p>
+  </div>
+  <button *ngIf="auth.isAuthenticated$ | async" class="wa-primary-btn danger" (click)="auth.logout()">
+    Logout
   </button>
 </div>

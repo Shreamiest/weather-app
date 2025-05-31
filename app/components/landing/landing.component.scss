@@ -1,0 +1,15 @@
+@import '../../../styles';
+
+.landing {
+    margin: 10% auto;
+    max-width: 850px;
+    h1 {
+        font-size: 3em;
+        font-weight: bold;
+        color: $font-primary-color
+    }
+    p {
+        color: $font-primary-color;
+        font-size: 1.2em;
+    }
+}

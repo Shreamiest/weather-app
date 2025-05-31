@@ -1,0 +1,43 @@
+@import '../../../styles';
+
+section {
+    h2 {
+        font-weight: 500;
+        font-size: 1em;
+        color: $font-primary-color;
+        a {
+            text-decoration: none;
+            color: $font-primary-color;
+        }
+    }
+    
+    .search-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        h2 {
+            font-weight: 700;
+            font-size: 1.3em;
+        }
+
+        input {
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 999px;
+            padding: 10px 20px;
+            min-width: 250px;
+            color: $font-primary-color;
+            background: rgba( 255, 255, 255, 0.15 );
+            &::placeholder {
+                color: $font-primary-color;
+                opacity: 0.7;
+            }
+        }
+
+        .error-msg {
+            color: $font-danger-color;
+            font-weight: 500;
+        }
+    }
+}

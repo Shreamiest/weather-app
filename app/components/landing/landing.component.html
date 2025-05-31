@@ -1,4 +1,8 @@
-<p>landing works!</p>
+
+<div class="landing p-4">
+    <h1>Weather<br>Forecast</h1>
+    <p class="mt-4">Welcome to the weather forecast web application. Please login with your GitHub user to use the application and view the weather in your city.</p>
+    <button class="wa-primary-btn mt-3" *ngIf="!(auth.isAuthenticated$ | async)" (click)="auth.loginWithRedirect()">Log in</button>
+</div>
 
 
-<button *ngIf="!(auth.isAuthenticated$ | async)" (click)="auth.loginWithRedirect()">Log in</button>

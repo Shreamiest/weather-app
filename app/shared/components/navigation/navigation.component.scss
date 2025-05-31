@@ -1,0 +1,21 @@
+@import '../../../../styles';
+
+.navbar {
+    background: rgba(255, 255, 255, 0.15);
+    min-height: 100px;
+    .icon {
+        width: 50px;
+    }
+    p {
+        color: $font-primary-color;
+        font-size: 1.2em;
+        font-weight: 700;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .navbar p {
+        display: none;
+    }
+}
