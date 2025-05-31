@@ -1,7 +1,6 @@
 <app-spinner *ngIf="isLoading"></app-spinner>
 
 <section *ngIf="!cityWeather" class="text-center mt-5">
-
     <ng-container *ngIf="userProfile">
         <h1>Welcome {{userProfile.name || userProfile.nickname}}</h1>
         <h2><a [href]="userProfile.profileUrl" target="_blank">{{userProfile.profileUrl}}</a></h2>
@@ -9,7 +8,7 @@
 
     <div class="search-section mt-5">
         <h2>Search your city</h2>
-        <input class="glassMorph mt-3" [(ngModel)]="cityName" placeholder="City" />
+        <input class="glassMorph mt-3" [(ngModel)]="cityName" placeholder="City" (keydown.enter)="getWeatherForecast()"/>
         <div *ngIf="errorMsg !== ''" class="error-msg mt-3" role="alert">
             {{errorMsg | titlecase}}
         </div>

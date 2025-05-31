@@ -23,10 +23,6 @@ export class WeatherComponent {
   ) { }
 
 
-  ngOnInit() {
-
-  }
-
   getDateNow() {
     return new Date();
   }
